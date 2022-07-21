@@ -1,0 +1,24 @@
+syntax="proto3";
+
+package apiserver.public.open;
+option go_package = "github.com/lxxxxxxxx/backend/apiserver/public/open;open";
+
+import "google/api/annotations.proto";
+
+
+service User{
+    rpc CreateUser(CreateUserReq)returns(CreateUserRes){
+        option(google.api.http)={
+            get:"/CreateUser",
+        };
+    }
+}
+
+message CreateUserReq{
+    string user_name=1;
+    string user_sex=2;
+}
+
+message CreateUserRes{
+    string user_id=1;
+}

@@ -1,0 +1,11 @@
+Server:
+    GrpcListenAddr: :8888
+    GatewayListenAddr: :8889
+
+Database:
+    Type: mysql
+    User: lx
+    Password: 1qaz!QAZ
+    Host: 127.0.0.1:3306
+    Schema: backend
+    
